@@ -36,3 +36,20 @@ _Avoid_: Sidebar, hamburger flyout
 The renderable area of a mobile screen guaranteed not to be clipped by physical hardware cutouts, status bars, or home indicator bars.
 _Avoid_: Margin box, screen padding
 
+**TaskRecord**:
+A persistent database record in the SQLite database representing a task with id, title, completed status (stored as integer 0/1), and creation timestamp.
+_Avoid_: Row item, entry
+
+**ContactRecord**:
+A persistent phone contact entity in the SQLite database containing name, phone number, email, and optional notes.
+_Avoid_: Phone entry, address book item
+
+**RememberCredential**:
+Stored authentication credentials preserved in local device storage allowing automatic authentication on subsequent application launches.
+_Avoid_: Saved cookie, auto token
+
+**DatabaseContext**:
+The asynchronous SQLite database lifecycle manager providing CRUD query execution and transaction handling for mobile components.
+_Avoid_: SQL wrapper, DB helper
+
+
